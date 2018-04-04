@@ -1,0 +1,24 @@
+{
+    "name": "shel/neos-multi-site-example",
+    "description": "Neos distribution for testing multi site setups",
+    "license": "GPL-3.0+",
+    "config": {
+        "vendor-dir": "Packages/Libraries",
+        "bin-dir": "bin"
+    },
+    "require": {
+        "neos/neos": "~3.3.0",
+        "neos/nodetypes": "~3.3.0",
+        "neos/demo": "~3.3.0",
+        "neos/site-kickstarter": "~3.3.0",
+
+        "neos/neos-ui": "~1.0",
+        "neos/neos-ui-compiled": "~1.0"
+    },
+    "scripts": {
+        "post-update-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+        "post-install-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+        "post-package-update": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
+        "post-package-install": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall"
+    }
+}
